@@ -13,11 +13,30 @@ class LinkedList{
     this.length = 1;
   }
 
-  addNode(value){
-     
+  push(value){
+     //var newNode = new Node(value);
+     //this.head.next = newNode;
+     //this.tail = newNode;
+
+     const newNode = new Node(value)
+      if (!this.head) {
+          this.head = newNode
+          this.tail = newNode
+      } else {
+          this.tail.next = newNode
+          this.tail = newNode
+      }
+      this.length++
+      return this
+  }
+  
+  pop(value){
+
   }
 }
 
-var ll = new LinkedList();
-ll.addNode(45)
+var ll = new LinkedList(56);
+ll.push(45)
+ll.push(90)
+ll.push(9)
 console.log(ll);
