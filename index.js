@@ -31,7 +31,9 @@ class LinkedList{
   }
   
   pop(value){
-
+    while(this.head.next){
+     console.log(this.head.next)
+    }
   }
 }
 
@@ -39,4 +41,5 @@ var ll = new LinkedList(56);
 ll.push(45)
 ll.push(90)
 ll.push(9)
+ll.pop()
 console.log(ll);
